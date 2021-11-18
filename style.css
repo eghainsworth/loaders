@@ -8,28 +8,28 @@
   font-family: merriweather;
 }
 
-.h1 {
+h1 {
       font-size: 50px;
       line-height: 48px;
       font-family: lora;
       color: #273533;
 }
 
-.h2 {
+h2 {
   font-size: 40px;
   line-height: 34px;
   font-family: lora;
   color: #5b6a56;
 }
 
-.h3 {
+h3 {
   font-size: 32px;
   line-height: 28px;
   font-family: lora;
   color: #90815F;
 }
 
-.paragraph {
+p {
   font-size: 16px;
   line-height: 16px;
   font-family: merriweather;
@@ -48,16 +48,23 @@
     text-decoration: none;
     color: #6D214F;
   }
+
   body {
-    margin: 6rem;
     display: flex;
     flex-direction: column;
-    
-
   }
+
    img {
      width: 100%;
      display: block;
+   }
+
+   .pumpkinpatch {
+     max-width: 400px;
+   }
+
+   .alpineloop {
+     max-width: 300px;
    }
 
   .button{
@@ -79,6 +86,48 @@
     
   }
 
+  .main-page main {
+    max-width: 70rem;
+  }
+
+  /* nav styles */
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-width: 60rem;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: 1rem;
+    user-select: none;
+  }
+
+  nav a:not([href]) {
+    color: #aaa;
+  }
+
+  nav a[href]:hover {
+    color: pink;
+  }
+  
+  
+
+
+
+  
+
+/* hero styles */
   .hero {
     position: relative;
   }
@@ -89,8 +138,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: #ffffff; */
-    padding: 2rem;
+    background-color: rgba(0,0,0,.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* text-align: right; */
   }
 
@@ -102,17 +154,30 @@
   }
 
   .hero p {
+    font-size: 24px;
     text-align: right;
     text-shadow: 1px 1px 10px #000;
     color: #fff;
   }
 
+  .hero {
+    height: 70vh;
+  }
+
+  .hero img {
+    height: 100%;
+    object-fit: cover;
+  }
+
   main {
-    /*   margin: 0 auto;
-      padding: 0 1rem; */
-      max-width: 50rem;
+    max-width: 50rem;
     align-self: center;
+    margin: 0 1rem;
     }
+
+  footer {
+    margin: 0 8rem;
+  }
 
     /* .panel {
       display: flex;
@@ -129,17 +194,16 @@
     } */
  
     /* card styles */
+
     .cards {
       display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin; 0 1rem;
     }
     
     .card {
       position: relative; 
-      margin-right: 1rem;
-    }
-
-    .card:last-of-type {
-      margin-right: 0;
     }
 
     .cards .overlay {
@@ -156,6 +220,7 @@
     }
 
     .cards p {
+      font-size: 24px;
       color: #fff;
       text-shadow: 1px 1px 10px #000;
       text-align: center;
@@ -185,3 +250,19 @@
     }
 
 
+@media (min-width: 500px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+}
