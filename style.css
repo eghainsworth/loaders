@@ -70,8 +70,8 @@ p {
   .button{
     cursor: pointer;
     display: inline-block;
-    color: #6D214F;
-    border: 3px solid #1e3799;
+    color: #5b6a56;
+    border: 3px solid #90815F;
     padding: 1rem;
     border-radius: 4px;
     margin-top: 6rem;
@@ -81,7 +81,7 @@ p {
   
   .button:hover {
     color: #ffffff;
-    background-color: #6D214F;
+    background-color: #5b6a56;
     
     
   }
